@@ -1,0 +1,20 @@
+{
+  "name": "s1351/snelstart-api",
+  "type": "library",
+  "description": "SnelStart PHP API library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "s1351"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "s1351\\SnelStartApi\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "minimum-stability": "dev"
+}
