@@ -30,7 +30,7 @@ class SnelStartApi
    * @param  array  $data
    * @return bool
    */
-  public function postVerkoopBoekingen(array $data)
+  public function post(array $data)
   {
     $this->request->setData($data);
     $this->request->setMethod('POST');
