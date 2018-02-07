@@ -64,7 +64,7 @@ class Request
    */
   public function setUrl(string $url)
   {
-    $this->url = $this->auth->apiUri . $url;
+    $this->url = $this->auth->getApiUrl() . $url;
   }
   /**
    * Create a request.

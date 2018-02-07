@@ -60,6 +60,16 @@ class Auth
   }
 
   /**
+   * Return API uri.
+   * 
+   * @return string
+   */
+  public function getApiUrl()
+  {
+    return $this->apiUri;
+  }
+
+  /**
    * Returns the current API key.
    * 
    * @return string
