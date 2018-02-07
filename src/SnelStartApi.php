@@ -18,7 +18,7 @@ class SnelStartApi
   {
     // Set authentication.
     $this->auth = new Auth;
-    $this->auth->setApiKey($apiKey);
+    $this->auth->setCredentials($apiKey);
   }
 
   /**
