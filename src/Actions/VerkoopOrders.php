@@ -4,7 +4,7 @@ namespace s1351\SnelStartApi\Actions;
 
 use s1351\SnelStartApi\Client\Request;
 
-class SnelStartApi
+class VerkoopOrders
 {
   /**
    * Request container.
