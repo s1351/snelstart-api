@@ -3,6 +3,7 @@
 namespace s1351\SnelStartApi;
 
 use s1351\SnelStartApi\Client\Auth;
+use s1351\SnelStartApi\Actions\VerkoopOrders as VerkoopOrdersAction;
 
 class SnelStartApi
 {
