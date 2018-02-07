@@ -18,7 +18,17 @@ class SnelStartApi
   {
     // Set authentication.
     $this->auth = new Auth;
-    $this->auth->set($apiKey);
+    $this->auth->setApiKey($apiKey);
+  }
+
+  /**
+   * Access verkooporder actions.
+   * 
+   * @return VerkoopOrders
+   */
+  public function verkoopOrders()
+  {
+    return new VerkoopOrdersAction($this->auth);
   }
 
 }

@@ -148,8 +148,7 @@ class Auth
       'Content-Type' => 'application/x-www-form-urlencoded',
     ];
 
-    $request = new Request($method, $uri, $headers, $body);
-
+    $request  = new Request($method, $uri, $headers, $body);
     $response = json_decode((new Client())->send($request)->getBody(), true);
 
     if (!isset($response['access_token'])) {
