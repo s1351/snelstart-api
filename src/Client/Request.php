@@ -74,7 +74,7 @@ class Request
   public function request()
   {
     $headers = [
-      'Content-Type'              => 'application/x-www-form-urlencoded',
+      //'Content-Type'              => 'application/x-www-form-urlencoded',
       'Ocp-Apim-Subscription-Key' => $this->auth->getSubscriptionKey(),
       'Authorization'             => $this->auth->getToken(),
     ];
