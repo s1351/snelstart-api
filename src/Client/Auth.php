@@ -59,14 +59,21 @@ class Auth
    */
   public function setCredentials($apiKey, $subscriptionKey)
   {
+    // Set the API key.
     $this->setApiKey($apiKey);
 
+    // Get the username and password from the API key.
     list($username, $password) = explode(':', base64_decode($apiKey));
 
+    // Set the username and password.
     $this->setUsername($username);
     $this->setPassword($password);
 
+    // Set the subscription key for the application.
     $this->setSubscriptionKey($subscriptionKey);
+
+    // Set the access token for the application.
+    $this->setToken();
   }
 
   /**
@@ -176,10 +183,9 @@ class Auth
   /**
    * Set access token.
    *
-   * @param string
    * @return void
    */
-  private function setToken($apiKey)
+  private function setToken()
   {
     $method = 'POST';
     $uri    = $this->authUri;
