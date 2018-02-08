@@ -27,14 +27,15 @@ class VerkoopOrders
   /**
    * Post verkoopboekingen request.
    *
-   * @param  array  $data
+   * @param  array   $data
+   * @param  string  $url
    * @return bool
    */
-  public function post(array $data = [])
+  public function post(array $data = [], $url = 'verkooporders')
   {
     $this->request->setData($data);
+    $this->request->setUrl($url);
     $this->request->setMethod('POST');
-    $this->request->setUrl('verkooporders');
 
     return $this->request->request();
   }

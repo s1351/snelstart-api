@@ -27,13 +27,14 @@ class Relaties
   /**
    * Get relaties request.
    *
-   * @param  array  $data
+   * @param  array   $data
+   * @param  string  $url
    * @return bool
    */
-  public function get(array $data = [])
+  public function get(array $data = [], $url = 'relaties')
   {
     $this->request->setMethod('GET');
-    $this->request->setUrl('relaties');
+    $this->request->setUrl($url);
     $this->request->setData($data);
 
     return $this->request->request();

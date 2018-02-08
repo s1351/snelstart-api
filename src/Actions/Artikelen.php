@@ -27,13 +27,14 @@ class Artikelen
   /**
    * Get artikelen request.
    *
-   * @param  array  $data
+   * @param  array   $data
+   * @param  string  $url
    * @return bool
    */
-  public function get(array $data = [])
+  public function get(array $data = [], $url = 'artikelen')
   {
     $this->request->setMethod('GET');
-    $this->request->setUrl('artikelen');
+    $this->request->setUrl($url);
     $this->request->setData($data);
 
     return $this->request->request();
