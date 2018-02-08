@@ -81,7 +81,6 @@ class Request
 
     $request = new GuzzleRequest($this->method, $this->url, $headers, $this->data);
 
-
     return json_decode((new Client())->send($request)->getBody(), true);
   }
 

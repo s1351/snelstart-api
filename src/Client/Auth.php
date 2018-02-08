@@ -189,7 +189,7 @@ class Auth
   {
     $method = 'POST';
     $uri    = $this->authUri;
-    $body   = "grant_type=password&amp;username={$this->username}&amp;{$this->password}";
+    $body   = "grant_type=clientkey&clientkey={$this->getApiKey()}";
 
     $headers = [
       'Content-Type' => 'application/x-www-form-urlencoded',
@@ -198,7 +198,7 @@ class Auth
     $request  = new Request($method, $uri, $headers, $body);
     $response = json_decode((new Client())->send($request)->getBody(), true);
 
-    if (!isset($response['access_token'])) {
+    if (isset($response['access_token'])) {
       $this->token = $response['access_token'];
     }
   }
