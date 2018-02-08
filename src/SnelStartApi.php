@@ -13,13 +13,14 @@ class SnelStartApi
    * Construct class.
    *
    * @param  string  $apiKey
+   * @param  string  $subscriptionKey
    * @return void
    */
-  public function __construct($apiKey)
+  public function __construct($apiKey, $subscriptionKey)
   {
     // Set authentication.
     $this->auth = new Auth;
-    $this->auth->setCredentials($apiKey);
+    $this->auth->setCredentials($apiKey, $subscriptionKey);
   }
 
   /**

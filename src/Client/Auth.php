@@ -15,6 +15,13 @@ class Auth
   private $apiKey;
 
   /**
+   * You subscription key.
+   *
+   * @var
+   */
+  private $subscriptionKey;
+
+  /**
    * Default API uri.
    *
    * @var
@@ -47,9 +54,10 @@ class Auth
    * Set required credentials.
    * 
    * @param  string  $apiKey
+   * @param  string  $subscriptionKey
    * @return void
    */
-  public function setCredentials($apiKey)
+  public function setCredentials($apiKey, $subscriptionKey)
   {
     $this->setApiKey($apiKey);
 
@@ -57,6 +65,8 @@ class Auth
 
     $this->setUsername($username);
     $this->setPassword($password);
+
+    $this->setSubscriptionKey($subscriptionKey);
   }
 
   /**
@@ -88,6 +98,27 @@ class Auth
   private function setApiKey($apiKey)
   {
     $this->apiKey = $apiKey;
+  }
+
+  /**
+   * Returns the current subscription key.
+   * 
+   * @return string
+   */
+  public function getSubscriptionKey()
+  {
+    return $this->subscriptionKey;
+  }
+
+  /**
+   * Set subscription key.
+   *
+   * @param  string  $subscriptionKey
+   * @return void
+   */
+  private function setSubscriptionKey($subscriptionKey)
+  {
+    $this->subscriptionKey = $subscriptionKey;
   }
 
   /**
