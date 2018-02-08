@@ -30,7 +30,7 @@ class VerkoopOrders
    * @param  array  $data
    * @return bool
    */
-  public function post(array $data)
+  public function post(array $data = [])
   {
     $this->request->setData($data);
     $this->request->setMethod('POST');
