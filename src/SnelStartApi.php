@@ -3,6 +3,7 @@
 namespace s1351\SnelStartApi;
 
 use s1351\SnelStartApi\Client\Auth;
+use s1351\SnelStartApi\Actions\Artikelen as ArtikelenAction;
 use s1351\SnelStartApi\Actions\VerkoopOrders as VerkoopOrdersAction;
 
 class SnelStartApi
@@ -21,6 +22,16 @@ class SnelStartApi
     // Set authentication.
     $this->auth = new Auth;
     $this->auth->setCredentials($apiKey, $subscriptionKey);
+  }
+
+  /**
+   * Access artikelen actions.
+   * 
+   * @return Artikelen
+   */
+  public function artikelen()
+  {
+    return new ArtikelenAction($this->auth);
   }
 
   /**
