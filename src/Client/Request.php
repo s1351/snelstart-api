@@ -42,7 +42,7 @@ class Request
    */
   public function setData(array $data)
   {
-    $this->data = $data;
+    $this->data = json_encode($data);
   }
 
   /**
