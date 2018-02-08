@@ -76,7 +76,7 @@ class Request
     $headers = [
       //'Content-Type'              => 'application/x-www-form-urlencoded',
       'Ocp-Apim-Subscription-Key' => $this->auth->getSubscriptionKey(),
-      'Authorization'             => $this->auth->getToken(),
+      'Authorization'             => 'Bearer ' . $this->auth->getToken(),
     ];
 
     $request = new GuzzleRequest($this->method, $this->url, $headers, $this->data);
