@@ -4,6 +4,7 @@ namespace s1351\SnelStartApi;
 
 use s1351\SnelStartApi\Client\Auth;
 use s1351\SnelStartApi\Actions\Artikelen as ArtikelenAction;
+use s1351\SnelStartApi\Actions\RelatiesOrders as RelatiesAction;
 use s1351\SnelStartApi\Actions\VerkoopOrders as VerkoopOrdersAction;
 
 class SnelStartApi
@@ -32,6 +33,16 @@ class SnelStartApi
   public function artikelen()
   {
     return new ArtikelenAction($this->auth);
+  }
+
+  /**
+   * Access relaties actions.
+   * 
+   * @return Relaties
+   */
+  public function relaties()
+  {
+    return new RelatiesAction($this->auth);
   }
 
   /**
