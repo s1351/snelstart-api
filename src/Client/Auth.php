@@ -189,7 +189,7 @@ class Auth
   {
     $method = 'POST';
     $uri    = $this->authUri;
-    $body   = "grant_type=clientkey&clientkey={$this->getApiKey()}";
+    $body   = "grant_type=password&username={$this->username}&password={$this->password}";
 
     $headers = [
       'Content-Type' => 'application/x-www-form-urlencoded',
