@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "s1351\\SnelStartApi\\": "src/"
+      "s1351\\SnelStartAPI\\": "src/"
     }
   },
   "require": {

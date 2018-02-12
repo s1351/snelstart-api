@@ -1,9 +1,9 @@
 <?php
 
-namespace s1351\SnelStartApi;
+namespace s1351\SnelStartAPI;
 
-use s1351\SnelStartApi\Client\Auth;
-use s1351\SnelStartApi\Client\Request;
+use s1351\SnelStartAPI\Client\Auth;
+use s1351\SnelStartAPI\Client\Request;
 
 class SnelStartApi
 {

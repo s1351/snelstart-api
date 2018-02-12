@@ -1,6 +1,6 @@
 <?php
 
-namespace s1351\SnelStartApi\Client;
+namespace s1351\SnelStartAPI\Client;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
