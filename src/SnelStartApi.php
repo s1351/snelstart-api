@@ -3,9 +3,7 @@
 namespace s1351\SnelStartApi;
 
 use s1351\SnelStartApi\Client\Auth;
-use s1351\SnelStartApi\Actions\Artikelen as ArtikelenAction;
-use s1351\SnelStartApi\Actions\Relaties as RelatiesAction;
-use s1351\SnelStartApi\Actions\VerkoopOrders as VerkoopOrdersAction;
+use s1351\SnelStartApi\Client\Request;
 
 class SnelStartApi
 {
@@ -26,33 +24,22 @@ class SnelStartApi
   }
 
   /**
-   * Access artikelen actions.
-   * 
-   * @return Artikelen
+   * Send API call.
+   *
+   * @param  array   $data
+   * @param  string  $url
+   * @param  string  $method
+   * @return mixed
    */
-  public function artikelen()
+  public function send(array $data = [], $url, $method = 'GET')
   {
-    return new ArtikelenAction($this->auth);
-  }
+    $request = new Request($this->auth);
 
-  /**
-   * Access relaties actions.
-   * 
-   * @return Relaties
-   */
-  public function relaties()
-  {
-    return new RelatiesAction($this->auth);
-  }
+    $request->setData($data);
+    $request->setUrl($url);
+    $request->setMethod($method);
 
-  /**
-   * Access verkooporder actions.
-   * 
-   * @return VerkoopOrders
-   */
-  public function verkoopOrders()
-  {
-    return new VerkoopOrdersAction($this->auth);
+    return $request->request();
   }
 
 }
