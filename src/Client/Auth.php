@@ -26,7 +26,7 @@ class Auth
    *
    * @var
    */
-  private $apiUri = 'https://b2bapi.snelstart.nl/v1/';
+  private $apiUri = 'https://b2bapi.snelstart.nl/v2/';
 
   /**
    * Default API auth uri.
