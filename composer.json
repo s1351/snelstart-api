@@ -2,7 +2,7 @@
   "name": "s1351/snelstart-api",
   "type": "library",
   "description": "SnelStart PHP API library",
-  "license": "MIT",
+  "license": "GPL-2.0-only",
   "authors": [
     {
       "name": "s1351"
